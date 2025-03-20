@@ -16,6 +16,7 @@ public class NameRepository {
      */
     public static int getSize() {
         //todo: implement getSize method
+        return names.length;
         return 0;
     }
 
@@ -27,6 +28,7 @@ public class NameRepository {
      */
     public static void setNames(String[] names) {
         //todo: implement setNames method
+        names = newNames[5];
     }
 
 
@@ -35,6 +37,7 @@ public class NameRepository {
      */
     public static void clear() {
         //todo: implement clear method
+        newNames = new String[0];
     }
 
 
@@ -45,6 +48,7 @@ public class NameRepository {
      */
     public static String[] findAll() {
         //todo: implement findAll method
+        return names.length = 0 ? names.clone() : new String[0];
         return null;
     }
 
@@ -57,7 +61,14 @@ public class NameRepository {
      */
     public static String find(String fullName) {
         //todo: implement find method
-        return null;
+        if (names != null) {
+            for (String name : names) {
+                if (name.equalsIgnoreCase(fullName)) {
+                    return name; // Return the matching name
+                }
+            }
+        }
+        return null; // Return null if no match is found
     }
 
 
