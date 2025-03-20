@@ -17,7 +17,7 @@ public class NameRepository {
     public static int getSize() {
         //todo: implement getSize method
         return names.length;
-        return 0;
+
     }
 
 
@@ -28,8 +28,15 @@ public class NameRepository {
      */
     public static void setNames(String[] names) {
         //todo: implement setNames method
-        names = newNames[5];
+        if (names != null) {
+            for (String name : names) {
+                System.out.println(name);
+            }
+        } else {
+            System.out.println("No names available.");
+        }
     }
+
 
 
     /**
@@ -48,8 +55,8 @@ public class NameRepository {
      */
     public static String[] findAll() {
         //todo: implement findAll method
-        return names.length = 0 ? names.clone() : new String[0];
-        return null;
+        return names != null ? names.clone() : new String[0];
+
     }
 
 
